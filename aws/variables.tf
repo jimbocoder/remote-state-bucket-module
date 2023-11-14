@@ -7,5 +7,10 @@ variable "state_bucket_name" {
 }
 
 variable "region" {
-    description = "The aws account region to deploy the state bucket in"
+  description = "The aws account region to deploy the state bucket in"
+}
+
+variable "env0_aws_account_id" {
+  description = "The env0 account id which is assuming the role"
+  default     = "913128560467"
 }

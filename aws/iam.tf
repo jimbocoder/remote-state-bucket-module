@@ -1,18 +1,14 @@
-locals {
-  env0_aws_account_id = "913128560467"
-}
-
 resource "aws_iam_role" "remote_state_access_role" {
   name = "remote-state-access-role"
 
   assume_role_policy = jsonencode({
-    Version = "2012-10-17",
+    Version   = "2012-10-17",
     Statement = [
       {
         Action    = "sts:AssumeRole"
         Effect    = "Allow"
         Principal = {
-          AWS = "arn:aws:iam::${local.env0_aws_account_id}:root"
+          AWS = "arn:aws:iam::${var.env0_aws_account_id}:root"
         }
         Condition = {
           StringEquals = {
