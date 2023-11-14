@@ -2,8 +2,8 @@ output "role_arn" {
   value = aws_iam_role.remote_state_access_role.arn
 }
 
-output "organization_id" {
-  value = var.organization_id
+output "external_id" {
+  value = var.external_id
 }
 
 output "region" {

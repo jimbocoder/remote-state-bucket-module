@@ -16,7 +16,7 @@ resource "aws_iam_role" "remote_state_access_role" {
         }
         Condition = {
           StringEquals = {
-            "sts:ExternalId" = var.organization_id
+            "sts:ExternalId" = var.external_id
           }
         }
       }
