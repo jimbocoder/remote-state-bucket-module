@@ -10,7 +10,7 @@ resource "aws_s3_bucket_versioning" "state_versioning" {
   }
 }
 
-resource "resource aws_s3_bucket_public_access_block" "state_public_access_block" {
+resource "aws_s3_bucket_public_access_block" "state_public_access_block" {
   bucket = aws_s3_bucket.state_bucket.id
 
   block_public_acls       = true
