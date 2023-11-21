@@ -11,5 +11,5 @@ output "region" {
 }
 
 output "bucket_name" {
-  value = aws_s3_bucket.state_bucket.arn
+  value = var.state_bucket_name
 }
