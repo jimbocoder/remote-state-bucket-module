@@ -8,7 +8,7 @@ resource "aws_iam_role" "remote_state_access_role" {
         Action    = "sts:AssumeRole"
         Effect    = "Allow"
         Principal = {
-          AWS = "arn:aws:iam::${var.env0_aws_account_id}:root"
+          AWS = var.env0_aws_role_name
         }
         Condition = {
           StringEquals = {
